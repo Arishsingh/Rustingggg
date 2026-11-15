@@ -1,6 +1,3 @@
-// Simple Rust program: basic calculator + number utilities
-// Demonstrates functions, structs, enums, and control flow.
-
 use std::fmt;
 
 #[derive(Debug)]
@@ -96,7 +93,6 @@ fn count_vowels(s: &str) -> usize {
 fn main() {
     println!("=== Rust Mini Toolkit ===\n");
 
-    // 1. Calculator demo
     let mut calc = Calculator::new();
     calc.calculate(10.0, 5.0, Operation::Add);
     calc.calculate(10.0, 5.0, Operation::Subtract);
@@ -105,24 +101,20 @@ fn main() {
     calc.calculate(10.0, 0.0, Operation::Divide);
     calc.print_history();
 
-    // 2. Prime number check
     println!("\n--- Prime Numbers up to 30 ---");
     let primes: Vec<u32> = (2..=30).filter(|&n| is_prime(n)).collect();
     println!("{:?}", primes);
 
-    // 3. Fibonacci sequence
     println!("\n--- First 10 Fibonacci Numbers ---");
     let fib = fibonacci(10);
     println!("{:?}", fib);
 
-    // 4. String utilities
     println!("\n--- String Utilities ---");
     let sample = "Hello, Rust World!";
     println!("Original: {}", sample);
     println!("Reversed: {}", reverse_string(sample));
     println!("Vowel count: {}", count_vowels(sample));
 
-    // 5. Simple loop + condition logic
     println!("\n--- FizzBuzz (1 to 20) ---");
     for i in 1..=20 {
         if i % 15 == 0 {
